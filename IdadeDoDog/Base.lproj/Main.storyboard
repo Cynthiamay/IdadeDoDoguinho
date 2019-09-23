@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +13,80 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IdadeDoDog" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qual a idade do Doguinho?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZzY-Ze-EvO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="81"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="35"/>
+                                <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="adesivo-colante-cachorro-papelaria-fofa-kawaii-D_NQ_NP_829970-MLB31048963185_062019-F" translatesAutoresizingMaskIntoConstraints="NO" id="R53-TB-ap4">
+                                <rect key="frame" x="-233.66666666666666" y="135" width="881.33333333333337" height="222"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="222" id="J0q-Eu-iJX"/>
+                                    <constraint firstAttribute="width" constant="881" id="mp6-K5-VGB"/>
+                                </constraints>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Digite a idade humana" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bZM-lf-nFE">
+                                <rect key="frame" x="20" y="376" width="374" height="34"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GnM-jF-ToA">
+                                <rect key="frame" x="121" y="433" width="172" height="30"/>
+                                <color key="backgroundColor" red="0.29327959217506627" green="0.20794139756964697" blue="0.11435357402925357" alpha="0.81898245780000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Gerar idade do Doguinho">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="descobrirIdade:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LY3-OJ-oJG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A Idade do Doguinho é :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F9b-81-AWL">
+                                <rect key="frame" x="100.66666666666669" y="478" width="213" height="22"/>
+                                <fontDescription key="fontDescription" name="AmericanTypewriter" family="American Typewriter" pointSize="19"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.878543600795756" green="0.62290588588342588" blue="0.34255571601979906" alpha="0.8189824578220859" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="bZM-lf-nFE" secondAttribute="trailing" constant="20" id="0lJ-rw-OEN"/>
+                            <constraint firstItem="bZM-lf-nFE" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="0xQ-yA-m6N"/>
+                            <constraint firstItem="ZzY-Ze-EvO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="4Df-sG-SJ6"/>
+                            <constraint firstItem="ZzY-Ze-EvO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Rmh-qp-7Ko"/>
+                            <constraint firstItem="F9b-81-AWL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Soj-1y-75l"/>
+                            <constraint firstItem="ZzY-Ze-EvO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Zge-aM-Pmf"/>
+                            <constraint firstItem="ZzY-Ze-EvO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="aZR-Vx-g2e"/>
+                            <constraint firstItem="F9b-81-AWL" firstAttribute="top" secondItem="GnM-jF-ToA" secondAttribute="bottom" constant="15" id="bGa-fw-BJH"/>
+                            <constraint firstItem="R53-TB-ap4" firstAttribute="top" secondItem="ZzY-Ze-EvO" secondAttribute="bottom" constant="10" id="eaF-KK-A7q"/>
+                            <constraint firstItem="R53-TB-ap4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="frH-d8-Qot"/>
+                            <constraint firstItem="bZM-lf-nFE" firstAttribute="top" secondItem="R53-TB-ap4" secondAttribute="bottom" constant="19" id="hQ8-Od-OeX"/>
+                            <constraint firstItem="F9b-81-AWL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nXn-Fg-Alh"/>
+                            <constraint firstItem="GnM-jF-ToA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tV0-Xx-8Hr"/>
+                            <constraint firstItem="GnM-jF-ToA" firstAttribute="top" secondItem="bZM-lf-nFE" secondAttribute="bottom" constant="23" id="tmH-8X-keX"/>
+                            <constraint firstItem="GnM-jF-ToA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xAl-L9-yec"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="campoDeTexto" destination="bZM-lf-nFE" id="f4k-dm-9x9"/>
+                        <outlet property="imagemDoDoguinho" destination="R53-TB-ap4" id="UZ8-A2-VAX"/>
+                        <outlet property="legendaResultado" destination="F9b-81-AWL" id="0bM-DV-o1b"/>
+                        <outlet property="mostraIdade" destination="F9b-81-AWL" id="RYy-bn-5N9"/>
+                        <outlet property="tituloDoApp" destination="ZzY-Ze-EvO" id="Mew-Ef-frT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="adesivo-colante-cachorro-papelaria-fofa-kawaii-D_NQ_NP_829970-MLB31048963185_062019-F" width="818" height="712"/>
+    </resources>
 </document>
